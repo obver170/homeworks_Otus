@@ -57,8 +57,3 @@ def is_prime_number(number):
             return False
 
     return True
-
-
-print(is_prime_number(6017))
-
-print(filter_numbers([1, 4409, 8527]))
