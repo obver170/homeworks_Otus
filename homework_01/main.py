@@ -12,9 +12,8 @@ def power_numbers(*args):
     <<< [1, 4, 25, 49]
     """
 
-    res = [i*i for i in args]
+    res = [i * i for i in args]
     return res
-
 
 
 # filter types
@@ -34,10 +33,25 @@ def filter_numbers(*args):
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
-    res = []
+    numbers = args[0]
     if ODD in args:
-        print(ODD)
+        res = [i for i in numbers if i % 2 != 0]
     elif EVEN in args:
-        print(EVEN)
+        res = [i for i in numbers if i % 2 == 0]
     else:
-        print(PRIME)
+        res = [i for i in numbers if is_prime_number(i)]
+
+    return res
+
+
+def is_prime_number(number):
+    # Метод для определения "простоты" числа
+    if number == 2:
+        return True
+
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
+
