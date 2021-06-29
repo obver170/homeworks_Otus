@@ -10,11 +10,19 @@ class Plane(Vehicle):
         self.cargo = 0
         self.max_cargo = max_cargo
 
+    # def load_cargo(self, baggage):
+    #     common_weight = baggage + self.cargo + self.weight
+    #
+    #     if common_weight <= self.max_cargo:
+    #         self.cargo = common_weight - self.weight
+    #     else:
+    #         raise CargoOverload
+
     def load_cargo(self, baggage):
-        common_weight = baggage + self.cargo + self.weight
+        common_weight = baggage + self.cargo
 
         if common_weight <= self.max_cargo:
-            self.cargo = common_weight - self.weight
+            self.cargo = common_weight
         else:
             raise CargoOverload
 
