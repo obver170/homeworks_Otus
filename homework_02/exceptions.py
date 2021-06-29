@@ -7,12 +7,12 @@
 
 
 class LowFuelError(Exception):
-    print(' * '*15, 'LowFuelError')
+    pass
 
 
 class NotEnoughFuel(Exception):
-    print(' * '*15, 'NotEnoughFuel')
+    pass
 
 
 class CargoOverload(Exception):
-    print(' * '*15, 'CargoOverload')
+    pass
