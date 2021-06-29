@@ -5,12 +5,14 @@
 - CargoOverload
 """
 
+
 class LowFuelError(Exception):
-    pass
+    print(' * '*15, 'LowFuelError')
+
 
 class NotEnoughFuel(Exception):
-    pass
+    print(' * '*15, 'NotEnoughFuel')
+
 
 class CargoOverload(Exception):
-    pass
-
+    print(' * '*15, 'CargoOverload')
